@@ -7,9 +7,9 @@ class Pen
 {
   public:
     Pen();
-    void writeLetter();
+    void writeLetter(char letter);
   private:
-    void movePen();
+    void movePen(boolean penPosition);
     void drawLine(double startx, double starty, double endx, double endy, boolean penPosition);
     
   
