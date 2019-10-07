@@ -1,4 +1,4 @@
-#indef Pen_h
+#ifndef Pen_h
 #define Pen_h
 
 #include "Arduino.h"
