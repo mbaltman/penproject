@@ -40,6 +40,7 @@ Pen::Pen()
 
 void Pen:: writeLetter(char letter)
 {
+  int xposNew = 0, yposNew = 0, penPos = 0, point = 0, members = 0, xposCur = 0, yposCur = 0; 
   int numLetter = int(letter); // new letter variable with letter's ascii value 
   // check if it is valid input 
   if (numLetter < 65 || numLetter > 90 || numLetter < 97 || numLetter > 122){
@@ -52,20 +53,26 @@ void Pen:: writeLetter(char letter)
   }
   // convert ascii value to array offset, 65-90 to 0-25
   numLetter -= 65;
-  while 
-  //while loop over the lines of the letters 
-  return; 
-}
 
 void Pen::movePen(boolean penPosition)
 {
   
+  return; 
 }
 
-void Pen:: drawLine(double startx, double starty, double endx, double endy, boolean penPosition)
+void Pen::movePen(bool penPosition)
 {
+  if(penPosition == 1){
+    myservo.write(110);           
+  }
 
+  if(penPosition == 1){
+    myservo.write(150);            
+  }
+}
 
+void Pen:: drawLine(double startx, double starty, double endx, double endy, bool penPosition)
+{
   movePen(penPosition)
   //caluclate the change in x, change in y for each, divide by the larger one to find incrememtns for each
 
