@@ -54,8 +54,26 @@ void Pen:: writeLetter(char letter)
   // convert ascii value to array offset, 65-90 to 0-25
   numLetter -= 65;
 
-void Pen::movePen(boolean penPosition)
-{
+  // setting initial postion 
+  xposCur = letters[numLetter][point][0];
+  yposCur = letters[numLetter][point][1];
+
+  // loop over the points in the array
+  while ((letters[numLetter][point][members] == 1) && (letters[numLetter][point][members] == 0)) // check to see if at last point
+  {
+      // increment the point and set the next location
+      point++;
+      xpos = letters[numLetter][point][0];
+      ypos = letters[numLetter][point][1];
+      penPos = letters[numLetter][point][2];
+      
+      // set the pen position, draw the line between the current position and the new
+      drawLine(xposCur, yposCur, xpos, ypos, penPos);
+
+      // set the new location
+      xposCur = xpos; 
+      yposCur = ypos; 
+  }
   
   return; 
 }
