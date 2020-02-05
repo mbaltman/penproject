@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 #include "Arduino.h"
 #include "Pen.h"
@@ -12,3 +13,6 @@ void loop() {
   mypen.drawLine(0,0,0,1,1);
   
 }
+=======
+#include "pen.h" 
+>>>>>>> 531fca24394f7dce31141e71781360e9d1bfa834
