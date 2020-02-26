@@ -8,12 +8,10 @@ class Pen
   public:
     Pen();
     void writeLetter(char letter);
-  private:
-    void movePen(boolean penPosition);
-   // void drawLine(double startx, double starty, double endx, double endy, boolean penPosition);
-    void pivot(double degrees);
+    void penDown(boolean penPosition);
+    void movePivot(double degrees);
     void moveStraight( double distance);
-    
-  
-}
+    void lineBetweenPoints(double x1, double y1, double x2,double y2);
+    double currAngle_;
+};
 #endif
